@@ -111,6 +111,30 @@ public class tablaHash {
         return Tabla[clave];
     }
 
+    public void desplegar(){
+        for (int i= 0; i<Tabla.length; i++){
+            System.out.println(Tabla[i]);
+        }
+    }
+
+    public void eliminar(int num){
+        int aux = 0;
+        int i = 0;
+        while(i < Tabla.length){
+            if(Tabla[aux]!=null){
+                if(getElemento(aux).getNumReservacion() == num){
+                    Tabla[aux] = null;
+                    System.out.println("Eliminado");
+                    break;
+                }
+            }
+            i++;
+            aux++;
+        }
+        System.out.println("No se encuentra en la tabla");
+
+    }
+
     static boolean esPrimo(int numero){
         int m = 2;
         boolean band = true;
@@ -127,6 +151,15 @@ public class tablaHash {
     private int calcularPrimoSiguiente(int numero){
         while(true){
             numero = numero + 1;
+            if(esPrimo(numero)){
+                return numero;
+            }
+        }
+    }
+
+    private int calcularPrimoAnterior(int numero){
+        while(true){
+            numero = numero - 1;
             if(esPrimo(numero)){
                 return numero;
             }
