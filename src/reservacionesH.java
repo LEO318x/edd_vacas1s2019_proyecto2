@@ -1,15 +1,18 @@
 public class reservacionesH {
     private int costoTotal;
     private int tiempoVuelo;
-    private int numReservacion;
+    private long numReservacion;
     private String nombreCliente;
-    //private listaenlazada;
+    private listaenlazada ls;
 
-    public reservacionesH(int costoTotal, int tiempoVuelo, int numReservacion, String nombreCliente){
+
+    public reservacionesH(int costoTotal, int tiempoVuelo, long numReservacion, String nombreCliente, listaenlazada ls){
         setCostoTotal(costoTotal);
         setTiempoVuelo(tiempoVuelo);
         setNumReservacion(numReservacion);
         setNombreCliente(nombreCliente);
+        setLs(ls);
+
     }
 
     public void setCostoTotal(int costoTotal) {
@@ -20,12 +23,16 @@ public class reservacionesH {
         this.tiempoVuelo = tiempoVuelo;
     }
 
-    public void setNumReservacion(int numReservacion) {
+    public void setNumReservacion(long numReservacion) {
         this.numReservacion = numReservacion;
     }
 
     public void setNombreCliente(String nombreCliente) {
         this.nombreCliente = nombreCliente;
+    }
+
+    public void setLs(listaenlazada ls) {
+        this.ls = ls;
     }
 
     public int getCostoTotal() {
@@ -36,11 +43,15 @@ public class reservacionesH {
         return tiempoVuelo;
     }
 
-    public int getNumReservacion() {
+    public long getNumReservacion() {
         return numReservacion;
     }
 
     public String getNombreCliente() {
         return nombreCliente;
+    }
+
+    public listaenlazada getLs() {
+        return ls;
     }
 }

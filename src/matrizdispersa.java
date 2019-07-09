@@ -245,6 +245,10 @@ public class matrizdispersa {
 
 
         }
+
+        public void rutasPosibles(int inicio, int destino){
+
+        }
     }
 
     //public nodoOrtogonal nodoOrtogonal;

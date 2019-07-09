@@ -6,14 +6,14 @@ public class listaenlazada {
 
 
         //Insertar al final
-        public nodo(int d){
-            this.dato = d;
+        public nodo(int id){
+            this.dato = id;
             this.siguiente = null;
         }
 
-        //Insertar inicio
-        public nodo(int d, nodo n){
-            dato = d;
+        //Insertar al inicio
+        public nodo(int id, nodo n){
+            dato = id;
             siguiente = n;
         }
 
